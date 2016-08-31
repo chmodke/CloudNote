@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	
+	<!--解决乱码    -->
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    <package name="login" namespace="/login" extends="struts-default,json-default">
+        <action name="toLogin" class="org.kehao.note.web.controller.user.CnUserLoginAction" method="toLogin">
+            <result name="fail"></result>
+            <!-- 返回json类型数据 -->
+            <result name="ok" type="json">
+				<param name="root">result</param><!-- result是action中设置的变量名，也是页面需要返回的数据，该变量必须有setter和getter方法 -->
+            </result>
+        </action>
+    </package>
+	
+	<!-- <package name="login" namespace="/login" extends="struts-default">
+		<action name="toLogin" class="org.kehao.note.web.controller.user.CnUserLoginAction" method="toLogin">
+			<result name="ok">
+				/WEB-INF/test/showUser.jsp
+			</result>
+		</action>
+	</package> -->
+</struts>

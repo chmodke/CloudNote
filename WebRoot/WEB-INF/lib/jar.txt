@@ -1,0 +1,8 @@
+1.JDBC	1
+2.Hibernate	14-3=11
+3.Struts2	5
+4.Spring2.5
+	IOC	2
+	AOP	4
+	整合	1
+5.JSTL	2
